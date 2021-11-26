@@ -173,7 +173,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/agrrdVEVOMreg/TEST/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/agrrdsezrreg/TEST/main/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -1649,7 +1649,7 @@ if not msa3d(msg) then
 if not Devban(msg) then
 local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'حطبه') 
 local VENOM_Msg = { 
-' ـــــــــــــــــــــــــــــــــــــــــــــــ\n   🤖╖ اهلا بك عزيزي أنا بوت  '..Namebot..'\n🌐╢ وظيفتي حماية المجموعات\n✅╢ لتفعيل البوت عليك اتباع مايلي \n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╢ سيتم ترقيتك مطور في البوت.\n♪︙╜ لاوامر التسليه اضغط /VEVOM او فتح الكيب\nــــــــــــــــــــــــــــــــــــــــــــــــــــ ',
+' ـــــــــــــــــــــــــــــــــــــــــــــــ\n   🤖╖ اهلا بك عزيزي أنا بوت  '..Namebot..'\n🌐╢ وظيفتي حماية المجموعات\n✅╢ لتفعيل البوت عليك اتباع مايلي \n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╢ سيتم ترقيتك مطور في البوت.\n♪︙╜ لاوامر التسليه اضغط /keyboard او فتح الكيب\nــــــــــــــــــــــــــــــــــــــــــــــــــــ ',
 } 
 Namebot = VENOM_Msg[math.random(#VENOM_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
@@ -1679,7 +1679,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, l
 end
 end
 end
-if text == 'مميزات السورس' or text == 'فتح الكيب' or text == '✪ 𝐆𝐎 𝐁𝐀𝐂𝐊 ✪' or text == 'مميزات حطبه' or text == '/VEVOM' then
+if text == 'مميزات السورس' or text == 'فتح الكيب' or text == '✪ 𝐆𝐎 𝐁𝐀𝐂𝐊 ✪' or text == 'مميزات حطبه' or text == '/keyboard' then
 local Sudo_Welcome = '♡︙اهلا بك مجددا عزيزي \n♡︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس حطبه فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'باد','تويت','صراحه'},
@@ -1925,7 +1925,7 @@ echo ' ♬•━━━━━𝘀𝗼𝘂𝗿𝗰𝗲 𝗵𝗮𝘁𝗯𝗮━━�
 end
 if text == 'تحديث السورس ' and Devban(msg) then 
 os.execute('rm -rf VENOM.lua')
-os.execute('wget https://raw.githubusercontent.com/agrrdVEVOMreg/TEST/main/VENOM.lua')
+os.execute('wget https://raw.githubusercontent.com/agrrdsezrreg/TEST/main/VENOM.lua')
 send(msg.chat_id_, msg.id_,' ● تم تحديث السورس')
 dofile('VENOM.lua')  
 end
@@ -2142,7 +2142,7 @@ keyboard.inline_keyboard = {
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙰𝚃𝙱𝙰', url="t.me/su_hatba"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/VEVOM_su/28&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sezr_su/28&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "ضع اسم للبوت" and msa3d(msg) then  
@@ -3707,7 +3707,7 @@ end
 return false
 end
 os.execute('rm -rf VENOM.lua')
-os.execute('wget https://raw.githubusercontent.com/agrrdVEVOMreg/TEST/main/VENOM.lua')
+os.execute('wget https://raw.githubusercontent.com/agrrdsezrreg/TEST/main/VENOM.lua')
 send(msg.chat_id_, msg.id_,' ● تم تحديث السورس')
 dofile('VENOM.lua')  
 end
@@ -4127,7 +4127,7 @@ keyboard.inline_keyboard = {
 {{text = '♪ اضغط لاضافه البوت لمجمعتك •' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/VEVOM_su/26&caption='  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/sezr_su/26&caption='  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'سيزر' or text == 'اصيل' then
@@ -4165,7 +4165,7 @@ keyboard.inline_keyboard = {
 {{text = '𓆩اضف البوت الي مجموعتك𓆪 ', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/VEVOM_su/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sezr_su/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 
@@ -5299,7 +5299,7 @@ keyboard.inline_keyboard = {
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙰𝚃𝙱𝙰', url="t.me/su_hatba"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/VEVOM_su/28&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sezr_su/28&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == ' ♬•━━━━━𝘀𝗼𝘂𝗿𝗰𝗲 𝗵𝗮𝘁𝗯𝗮━━━━━•♬' then
 local Text = [[ 
@@ -5313,7 +5313,7 @@ keyboard.inline_keyboard = {
 {{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙰𝚃𝙱𝙰', url="t.me/su_hatba"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/VEVOM_su/28&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sezr_su/28&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'التواصل'  then
@@ -5326,7 +5326,7 @@ keyboard.inline_keyboard = {
 {{text = '˹ᴛᴀᴡᴏsʟ˼', url="t.me/NINKJBOT"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/VEVOM_su/28&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/sezr_su/28&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'العاب حطبه' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
 local Text = [[  
@@ -7429,7 +7429,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if Devban(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/agrrdVEVOMreg/TEST/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/agrrdsezrreg/TEST/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -7467,7 +7467,7 @@ t = " ● الملف  ⋙ "..file.."\n ● تم تعطيل ملف \n"
 else
 t = " ● بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/agrrdVEVOMreg/TEST/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/agrrdsezrreg/TEST/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -7487,7 +7487,7 @@ t = " ● بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = " ● الملف  ⋙ "..file.."\n ● تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/agrrdVEVOMreg/TEST/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/agrrdsezrreg/TEST/main/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
