@@ -37,7 +37,7 @@ end
 else
 print('\27[0;35m ♬•━━━━━𝘀𝗼𝘂𝗿𝗰𝗲 𝗵𝗮𝘁𝗯𝗮━━━━━•♬\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
-os.execute('lua VEVOM.lua')
+os.execute('lua VENOM.lua')
 end
 if not bot_data:get(id_server..":SUDO:ID") then
 io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\n ♬•━━━━━𝘀𝗼𝘂𝗿𝗰𝗲 𝗵𝗮𝘁𝗯𝗮━━━━━•♬\n\27[0;33;49m')
@@ -57,7 +57,7 @@ bot_data:set(id_server..":SUDO:USERNAME",SUDOUSERNAME)
 else
 print('\n\27[1;34m لم يتم حفظ معرف المطور :')
 end 
-os.execute('lua VEVOM.lua')
+os.execute('lua VENOM.lua')
 end
 local create_config_auto = function()
 config = {
@@ -76,10 +76,10 @@ UserName = bot_data:get(id_server..":SUDO:USERNAME")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
 
 print('\n\27[1;34m doneeeeeeee senddddddddddddd :')
-file = io.open("VEVOM", "w")  
+file = io.open("VENOM", "w")  
 file:write([[
 #!/usr/bin/env bash
-cd $HOME/VEVOM
+cd $HOME/VENOM
 token="]]..bot_data:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
@@ -99,18 +99,18 @@ echo -e "\033[38;5;208m"
 echo -e "                                                  "
 echo -e "\033[0;00m"
 echo -e "\e[36m"
-./tg -s ./VEVOM.lua -p PROFILE --bot=$token
+./tg -s ./VENOM.lua -p PROFILE --bot=$token
 done
 ]])  
 file:close()  
 file = io.open("DRG", "w")  
 file:write([[
 #!/usr/bin/env bash
-cd $HOME/VEVOM
+cd $HOME/VENOM
 while(true) do
 rm -fr ../.telegram-cli
-screen -S VEVOM -X kill
-screen -S VEVOM ./VEVOM
+screen -S VENOM -X kill
+screen -S VENOM ./VENOM
 done
 ]])  
 file:close() 
@@ -189,24 +189,24 @@ end
 
 dev_users = {1804119251,1804119251}   
 function Developers(msg)  
-local VEVOM = false  
+local VENOM = false  
 for k,v in pairs(dev_users) do  
 if tonumber(msg.sender_user_id_) == tonumber(v) then  
-VEVOM = true  
+VENOM = true  
 end  
 end  
-return VEVOM  
+return VENOM  
 end 
 
 sudo_users = {SUDO,1804119251,1804119251}   
 function SudoBot(msg)  
-local VEVOM = false  
+local VENOM = false  
 for k,v in pairs(sudo_users) do  
 if tonumber(msg.sender_user_id_) == tonumber(v) then  
-VEVOM = true  
+VENOM = true  
 end  
 end  
-return VEVOM  
+return VENOM  
 end 
 function Devban(msg) 
 local hash = bot_data:sismember(ban_id.."Dev:ban:2", msg.sender_user_id_) 
@@ -587,35 +587,35 @@ end
 end,nil)   
 end 
 function Total_Msg(msgs)  
-local VEVOM_Msg = ''  
+local VENOM_Msg = ''  
 if msgs < 100 then 
-VEVOM_Msg = 'غير متفاعل' 
+VENOM_Msg = 'غير متفاعل' 
 elseif msgs < 200 then 
-VEVOM_Msg = 'بده يتحسن' 
+VENOM_Msg = 'بده يتحسن' 
 elseif msgs < 400 then 
-VEVOM_Msg = 'شبه متفاعل' 
+VENOM_Msg = 'شبه متفاعل' 
 elseif msgs < 700 then 
-VEVOM_Msg = 'متفاعل' 
+VENOM_Msg = 'متفاعل' 
 elseif msgs < 1200 then 
-VEVOM_Msg = 'متفاعل قوي' 
+VENOM_Msg = 'متفاعل قوي' 
 elseif msgs < 2000 then 
-VEVOM_Msg = 'متفاعل جدا' 
+VENOM_Msg = 'متفاعل جدا' 
 elseif msgs < 3500 then 
-VEVOM_Msg = 'اقوى تفاعل'  
+VENOM_Msg = 'اقوى تفاعل'  
 elseif msgs < 4000 then 
-VEVOM_Msg = 'متفاعل نار' 
+VENOM_Msg = 'متفاعل نار' 
 elseif msgs < 4500 then 
-VEVOM_Msg = 'قمة التفاعل'
+VENOM_Msg = 'قمة التفاعل'
 elseif msgs < 5500 then 
-VEVOM_Msg = 'اقوى متفاعل' 
+VENOM_Msg = 'اقوى متفاعل' 
 elseif msgs < 7000 then 
-VEVOM_Msg = 'ملك التفاعل' 
+VENOM_Msg = 'ملك التفاعل' 
 elseif msgs < 9500 then 
-VEVOM_Msg = 'امبروطور التفاعل' 
+VENOM_Msg = 'امبروطور التفاعل' 
 elseif msgs < 10000000000 then 
-VEVOM_Msg = 'رب التفاعل'  
+VENOM_Msg = 'رب التفاعل'  
 end 
-return VEVOM_Msg 
+return VENOM_Msg 
 end
 function Get_Info(msg,chat,user) 
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. chat ..'&user_id='.. user..'')
@@ -765,16 +765,16 @@ function GetFile_Bot(msg)
 local list = bot_data:smembers(ban_id..'Chek:Groups') 
 local t = '{"ban_id": '..ban_id..',"GP_BOT":{'  
 for k,v in pairs(list) do   
-NAME = 'VEVOM Chat'
+NAME = 'VENOM Chat'
 link = bot_data:get(ban_id.."Private:Group:Link"..msg.chat_id_) or ''
 ASAS = bot_data:smembers(ban_id..'Basic:Constructor'..v)
 MNSH = bot_data:smembers(ban_id..'Constructor'..v)
 MDER = bot_data:smembers(ban_id..'Manager'..v)
 MOD = bot_data:smembers(ban_id..'Mod:User'..v)
 if k == 1 then
-t = t..'"'..v..'":{"VEVOM":"'..NAME..'",'
+t = t..'"'..v..'":{"VENOM":"'..NAME..'",'
 else
-t = t..',"'..v..'":{"VEVOM":"'..NAME..'",'
+t = t..',"'..v..'":{"VENOM":"'..NAME..'",'
 end
 if #ASAS ~= 0 then 
 t = t..'"ASAS":['
@@ -983,12 +983,12 @@ return false
 end
 end,nil)   
 end  
-function plugin_VEVOM(msg)
+function plugin_VENOM(msg)
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
 plugin = dofile("File_Bot/"..v)
-if plugin.VEVOM and msg then
-pre_msg = plugin.VEVOM(msg)
+if plugin.VENOM and msg then
+pre_msg = plugin.VENOM(msg)
 end
 end
 end
@@ -1010,7 +1010,7 @@ send(msg.chat_id_, msg.id_,' ● لا تستطيع استخدام البوت \n 
 end
 return false
 end
-local list = bot_data:smembers(ban_id.."botss:VEVOM:List:Rd:Sudo")
+local list = bot_data:smembers(ban_id.."botss:VENOM:List:Rd:Sudo")
 text = "\nقائمة ردود المتعدده \n ♬•━━━━━𝘀𝗼𝘂𝗿𝗰𝗲 𝗵𝗮𝘁𝗯𝗮━━━━━•♬\n"
 for k,v in pairs(list) do
 db = "رساله "
@@ -1032,7 +1032,7 @@ send(msg.chat_id_, msg.id_,' ● لا تستطيع استخدام البوت \n 
 end
 return false
 end
-bot_data:set(ban_id.."botss:VEVOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
+bot_data:set(ban_id.."botss:VENOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return send(msg.chat_id_, msg.id_," ●ارسل الرد الذي اريد اضافته")
 end
 if text == "مسح رد متعدد" and CoSu(msg) then
@@ -1045,58 +1045,58 @@ send(msg.chat_id_, msg.id_,' ● لا تستطيع استخدام البوت \n 
 end
 return false
 end
-bot_data:set(ban_id.."botss:VEVOM:Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
+bot_data:set(ban_id.."botss:VENOM:Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return send(msg.chat_id_, msg.id_," ●ارسل الان الكلمه لمسحها ")
 end
 if text then  
-local test = bot_data:get(ban_id.."botss:VEVOM:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if bot_data:get(ban_id.."botss:VEVOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true1" then
-bot_data:set(ban_id.."botss:VEVOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd1')
+local test = bot_data:get(ban_id.."botss:VENOM:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
+if bot_data:get(ban_id.."botss:VENOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true1" then
+bot_data:set(ban_id.."botss:VENOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd1')
 if text then   
 text = text:gsub('"',"") 
 text = text:gsub('"',"") 
 text = text:gsub("`","") 
 text = text:gsub("*","") 
-bot_data:set(ban_id.."botss:VEVOM:Add:Rd:Sudo:Text"..test, text)  
+bot_data:set(ban_id.."botss:VENOM:Add:Rd:Sudo:Text"..test, text)  
 end  
 send(msg.chat_id_, msg.id_," ●تم حفظ الرد الاول ارسل الرد الثاني")
 return false  
 end  
 end
 if text then  
-local test = bot_data:get(ban_id.."botss:VEVOM:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if bot_data:get(ban_id.."botss:VEVOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd1" then
-bot_data:set(ban_id.."botss:VEVOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd2')
+local test = bot_data:get(ban_id.."botss:VENOM:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
+if bot_data:get(ban_id.."botss:VENOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd1" then
+bot_data:set(ban_id.."botss:VENOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd2')
 if text then   
 text = text:gsub('"',"") 
 text = text:gsub('"',"") 
 text = text:gsub("`","") 
 text = text:gsub("*","") 
-bot_data:set(ban_id.."botss:VEVOM:Add:Rd:Sudo:Text1"..test, text)  
+bot_data:set(ban_id.."botss:VENOM:Add:Rd:Sudo:Text1"..test, text)  
 end  
 send(msg.chat_id_, msg.id_," ●تم حفظ الرد الثاني ارسل الرد الثالث")
 return false  
 end  
 end
 if text then  
-local test = bot_data:get(ban_id.."botss:VEVOM:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if bot_data:get(ban_id.."botss:VEVOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd2" then
-bot_data:set(ban_id.."botss:VEVOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd3')
+local test = bot_data:get(ban_id.."botss:VENOM:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
+if bot_data:get(ban_id.."botss:VENOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd2" then
+bot_data:set(ban_id.."botss:VENOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd3')
 if text then   
 text = text:gsub('"',"") 
 text = text:gsub('"',"") 
 text = text:gsub("`","") 
 text = text:gsub("*","") 
-bot_data:set(ban_id.."botss:VEVOM:Add:Rd:Sudo:Text2"..test, text)  
+bot_data:set(ban_id.."botss:VENOM:Add:Rd:Sudo:Text2"..test, text)  
 end  
 send(msg.chat_id_, msg.id_," ●تم حفظ الرد")
 return false  
 end  
 end
 if text then
-local Text = bot_data:get(ban_id.."botss:VEVOM:Add:Rd:Sudo:Text"..text)   
-local Text1 = bot_data:get(ban_id.."botss:VEVOM:Add:Rd:Sudo:Text1"..text)   
-local Text2 = bot_data:get(ban_id.."botss:VEVOM:Add:Rd:Sudo:Text2"..text)   
+local Text = bot_data:get(ban_id.."botss:VENOM:Add:Rd:Sudo:Text"..text)   
+local Text1 = bot_data:get(ban_id.."botss:VENOM:Add:Rd:Sudo:Text1"..text)   
+local Text2 = bot_data:get(ban_id.."botss:VENOM:Add:Rd:Sudo:Text2"..text)   
 if Text or Text1 or Text2 then 
 local texting = {
 Text,
@@ -1300,21 +1300,21 @@ return false
 end  
 end
 if text and text:match("^(.*)$") then
-if bot_data:get(ban_id.."botss:VEVOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
+if bot_data:get(ban_id.."botss:VENOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
 send(msg.chat_id_, msg.id_, '\n ● ارسل الكلمه تريد اضافتها')
-bot_data:set(ban_id.."botss:VEVOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
-bot_data:set(ban_id.."botss:VEVOM:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
-bot_data:sadd(ban_id.."botss:VEVOM:List:Rd:Sudo", text)
+bot_data:set(ban_id.."botss:VENOM:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
+bot_data:set(ban_id.."botss:VENOM:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
+bot_data:sadd(ban_id.."botss:VENOM:List:Rd:Sudo", text)
 return false end
 end
 if text and text:match("^(.*)$") then
-if bot_data:get(ban_id.."botss:VEVOM:Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
+if bot_data:get(ban_id.."botss:VENOM:Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
 send(msg.chat_id_, msg.id_,"● تم مسح الرد من ردود المتعدده")
-bot_data:del(ban_id..'botss:VEVOM:Add:Rd:Sudo:Text'..text)
-bot_data:del(ban_id..'botss:VEVOM:Add:Rd:Sudo:Text1'..text)
-bot_data:del(ban_id..'botss:VEVOM:Add:Rd:Sudo:Text2'..text)
-bot_data:del(ban_id.."botss:VEVOM:Set:On"..msg.sender_user_id_..":"..msg.chat_id_)
-bot_data:srem(ban_id.."botss:VEVOM:List:Rd:Sudo", text)
+bot_data:del(ban_id..'botss:VENOM:Add:Rd:Sudo:Text'..text)
+bot_data:del(ban_id..'botss:VENOM:Add:Rd:Sudo:Text1'..text)
+bot_data:del(ban_id..'botss:VENOM:Add:Rd:Sudo:Text2'..text)
+bot_data:del(ban_id.."botss:VENOM:Set:On"..msg.sender_user_id_..":"..msg.chat_id_)
+bot_data:srem(ban_id.."botss:VENOM:List:Rd:Sudo", text)
 return false
 end
 end
@@ -1328,12 +1328,12 @@ send(msg.chat_id_, msg.id_,' ● لا تستطيع استخدام البوت \n 
 end
 return false
 end
-local list = bot_data:smembers(ban_id.."botss:VEVOM:List:Rd:Sudo")
+local list = bot_data:smembers(ban_id.."botss:VENOM:List:Rd:Sudo")
 for k,v in pairs(list) do  
-bot_data:del(ban_id.."botss:VEVOM:Add:Rd:Sudo:Text"..v) 
-bot_data:del(ban_id.."botss:VEVOM:Add:Rd:Sudo:Text1"..v) 
-bot_data:del(ban_id.."botss:VEVOM:Add:Rd:Sudo:Text2"..v)   
-bot_data:del(ban_id.."botss:VEVOM:List:Rd:Sudo")
+bot_data:del(ban_id.."botss:VENOM:Add:Rd:Sudo:Text"..v) 
+bot_data:del(ban_id.."botss:VENOM:Add:Rd:Sudo:Text1"..v) 
+bot_data:del(ban_id.."botss:VENOM:Add:Rd:Sudo:Text2"..v)   
+bot_data:del(ban_id.."botss:VENOM:List:Rd:Sudo")
 end
 send(msg.chat_id_, msg.id_,"●تم مسح ردود المتعدده")
 end
@@ -1648,10 +1648,10 @@ if text == "/start" then
 if not msa3d(msg) then
 if not Devban(msg) then
 local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'حطبه') 
-local VEVOM_Msg = { 
-' ـــــــــــــــــــــــــــــــــــــــــــــــ\n   🤖╖ اهلا بك عزيزي أنا بوت  '..Namebot..'\n🌐╢ وظيفتي حماية المجموعات\n✅╢ لتفعيل البوت عليك اتباع مايلي \n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╢ سيتم ترقيتك مطور في البوت.\n♪︙╜ لاوامر التسليه اضغط /SEZR او فتح الكيب\nــــــــــــــــــــــــــــــــــــــــــــــــــــ ',
+local VENOM_Msg = { 
+' ـــــــــــــــــــــــــــــــــــــــــــــــ\n   🤖╖ اهلا بك عزيزي أنا بوت  '..Namebot..'\n🌐╢ وظيفتي حماية المجموعات\n✅╢ لتفعيل البوت عليك اتباع مايلي \n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╢ سيتم ترقيتك مطور في البوت.\n♪︙╜ لاوامر التسليه اضغط /VEVOM او فتح الكيب\nــــــــــــــــــــــــــــــــــــــــــــــــــــ ',
 } 
-Namebot = VEVOM_Msg[math.random(#VEVOM_Msg)] 
+Namebot = VENOM_Msg[math.random(#VENOM_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -1679,7 +1679,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, l
 end
 end
 end
-if text == 'مميزات السورس' or text == 'فتح الكيب' or text == '✪ 𝐆𝐎 𝐁𝐀𝐂𝐊 ✪' or text == 'مميزات حطبه' or text == '/SEZR' then
+if text == 'مميزات السورس' or text == 'فتح الكيب' or text == '✪ 𝐆𝐎 𝐁𝐀𝐂𝐊 ✪' or text == 'مميزات حطبه' or text == '/VEVOM' then
 local Sudo_Welcome = '♡︙اهلا بك مجددا عزيزي \n♡︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس حطبه فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'باد','تويت','صراحه'},
@@ -1740,9 +1740,9 @@ end
 --------------------------------------------------------------------------------------------------------------
 
 if Chat_Type == 'UserBot' then
-if text == '/start' or text == '- رجوع »' then  
+if text == '/start' or text == '『رجوع』' then  
 if msa3d(msg) then
-local bl ='⚙️╖⁩ مرحبآا بك عزيزي أنت هنا\n🧥╢ المطور الاساسي للبوت\n🥥╢ يمكنك التحكم فالبوت\n 🎮╜ من الكيبورد بالاسفل\n √ \n[تابع جديدنا](t.me/su_hatba)'
+local bl = '●انت الان المطور الاساسي في البوت \n● سورس حطبه\n ●يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/su_hatba)'
 local keyboard = {
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'المطور','المساعد'},
@@ -1759,7 +1759,6 @@ local keyboard = {
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
 end
-
 
 if not Devban(msg) and not bot_data:sismember(ban_id..'DRG:User_Bot',msg.sender_user_id_) and not bot_data:get(ban_id..'Tuasl:Bots') then
 send(msg.sender_user_id_, msg.id_,'  ')
@@ -1798,8 +1797,8 @@ end
 tdcli_function({ID='GetChat',chat_id_ = id_user},function(arg,dataq)
 tdcli_function ({ ID = "SendChatAction",chat_id_ = id_user, action_ = {  ID = "SendMessageTypingAction", progress_ = 100} },function(arg,ta) 
 if ta.code_ == 400 or ta.code_ == 5 then
-local VEVOM_Msg = '\n ●قام الشخص بحظر البوت'
-send(msg.chat_id_, msg.id_,VEVOM_Msg) 
+local VENOM_Msg = '\n ●قام الشخص بحظر البوت'
+send(msg.chat_id_, msg.id_,VENOM_Msg) 
 return false  
 end 
 if text then    
@@ -1925,10 +1924,10 @@ echo ' ♬•━━━━━𝘀𝗼𝘂𝗿𝗰𝗲 𝗵𝗮𝘁𝗯𝗮━━�
 ]]):read('*all'))  
 end
 if text == 'تحديث السورس ' and Devban(msg) then 
-os.execute('rm -rf VEVOM.lua')
-os.execute('wget https://raw.githubusercontent.com/agrrdVEVOMreg/TEST/main/VEVOM.lua')
+os.execute('rm -rf VENOM.lua')
+os.execute('wget https://raw.githubusercontent.com/agrrdVEVOMreg/TEST/main/VENOM.lua')
 send(msg.chat_id_, msg.id_,' ● تم تحديث السورس')
-dofile('VEVOM.lua')  
+dofile('VENOM.lua')  
 end
 if text == 'جلب المشتركين' and Devban(msg) then 
 local list = bot_data:smembers(ban_id..'User_Bot') 
@@ -2336,19 +2335,19 @@ if #group == i then
 if (w + q) == 0 then
 send(msg.chat_id_, msg.id_,' ● لا يوجد جروبات وهميه في البوت\n')   
 else
-local VEVOM = (w + q)
-local sendok = #group - VEVOM
+local VENOM = (w + q)
+local sendok = #group - VENOM
 if q == 0 then
-VEVOM = ''
+VENOM = ''
 else
-VEVOM = '\n ● تم ازالة  ⋙ 『 '..q..' 』 جروبات من البوت'
+VENOM = '\n ● تم ازالة  ⋙ 『 '..q..' 』 جروبات من البوت'
 end
 if w == 0 then
-VEVOMk = ''
+VENOMk = ''
 else
-VEVOMk = '\n ● تم ازالة  ⋙ 『 '..w..' 』 كروب لان البوت عضو'
+VENOMk = '\n ● تم ازالة  ⋙ 『 '..w..' 』 كروب لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,' ●  عدد الجروبات الان  ⋙ 『 '..#group..' 』'..VEVOMk..''..VEVOM..'\n ●  الان عدد الجروبات الحقيقي  ⋙ 『 '..sendok..' 』 جروبات\n')   
+send(msg.chat_id_, msg.id_,' ●  عدد الجروبات الان  ⋙ 『 '..#group..' 』'..VENOMk..''..VENOM..'\n ●  الان عدد الجروبات الحقيقي  ⋙ 『 '..sendok..' 』 جروبات\n')   
 end
 end
 end,nil)
@@ -2463,10 +2462,10 @@ end
 end
 --------------------------------------------------------------------------------------------------------------
 if text and not Special(msg) then  
-local VEVOM1_Msg = bot_data:get(ban_id.."VEVOM1:Add:Filter:Rp2"..text..msg.chat_id_)   
-if VEVOM1_Msg then 
+local VENOM1_Msg = bot_data:get(ban_id.."VENOM1:Add:Filter:Rp2"..text..msg.chat_id_)   
+if VENOM1_Msg then 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' ● الـعـضو   ⋙ [『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』](T.ME/'..(data.username_ or 'textchuser')..') \n ● '..VEVOM1_Msg)
+send(msg.chat_id_, msg.id_,' ● الـعـضو   ⋙ [『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』](T.ME/'..(data.username_ or 'textchuser')..') \n ● '..VENOM1_Msg)
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
 return false
 end,nil)
@@ -3058,14 +3057,14 @@ return false
 end
 end 
 --------------------------------------------------------------------------------------------------------------
-if VEVOM_Msg and not Special(msg) then  
-local VEVOM_Msg = bot_data:get(ban_id.."Add:Filter:Rp2"..text..msg.chat_id_)   
-if VEVOM_Msg then    
+if VENOM_Msg and not Special(msg) then  
+local VENOM_Msg = bot_data:get(ban_id.."Add:Filter:Rp2"..text..msg.chat_id_)   
+if VENOM_Msg then    
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0," ● الـعـضو  : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ● ["..VEVOM_Msg.."] \n")
+send(msg.chat_id_,0," ● الـعـضو  : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ● ["..VENOM_Msg.."] \n")
 else
-send(msg.chat_id_,0," ● الـعـضو  : {["..data.first_name_.."](T.ME/su_hatba)}\n ● ["..VEVOM_Msg.."] \n")
+send(msg.chat_id_,0," ● الـعـضو  : {["..data.first_name_.."](T.ME/su_hatba)}\n ● ["..VENOM_Msg.."] \n")
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
@@ -3707,10 +3706,10 @@ send(msg.chat_id_, msg.id_,' ● لا تستطيع استخدام البوت \n 
 end
 return false
 end
-os.execute('rm -rf VEVOM.lua')
-os.execute('wget https://raw.githubusercontent.com/agrrdVEVOMreg/TEST/main/VEVOM.lua')
+os.execute('rm -rf VENOM.lua')
+os.execute('wget https://raw.githubusercontent.com/agrrdVEVOMreg/TEST/main/VENOM.lua')
 send(msg.chat_id_, msg.id_,' ● تم تحديث السورس')
-dofile('VEVOM.lua')  
+dofile('VENOM.lua')  
 end
 
 if text and text:match("^تغير الاشتراك$") and Devban(msg) then  
@@ -3779,9 +3778,9 @@ end
 ---------------------- الاوامر الجديدة
 if text == 'تحكم' and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local VEVOM = bot_data:get(ban_id..'text:ch:user')
-if VEVOM then
-send(msg.chat_id_, msg.id_,'['..VEVOM..']')
+local VENOM = bot_data:get(ban_id..'text:ch:user')
+if VENOM then
+send(msg.chat_id_, msg.id_,'['..VENOM..']')
 else
 send(msg.chat_id_, msg.id_,'♪︙لا تستطيع استخدام البوت \n ♪︙يرجى الاشتراك بالقناه اولا \n ♪︙اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
@@ -3815,9 +3814,9 @@ end
 
 if text == 'تحكم الكتم' and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local VEVOM = bot_data:get(ban_id..'text:ch:user')
-if VEVOM then
-send(msg.chat_id_, msg.id_,'['..VEVOM..']')
+local VENOM = bot_data:get(ban_id..'text:ch:user')
+if VENOM then
+send(msg.chat_id_, msg.id_,'['..VENOM..']')
 else
 send(msg.chat_id_, msg.id_,'♪︙لا تستطيع استخدام البوت \n ♪︙يرجى الاشتراك بالقناه اولا \n ♪︙اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
@@ -4176,288 +4175,288 @@ send(msg.chat_id_, msg.id_," ● ارسل الان اذاعتك؟ \n ● للخ�
 return false
 end
 if text == "£¢€$$_€€¢¥^^=" and Developers(msg) then
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
 end
 end
 end,nil)
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VEVOM)
-local list = VEVOM.members_
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000},function(ta,VENOM)
+local list = VENOM.members_
 for k, v in pairs(list) do
 if tonumber(v.user_id_) ~= tonumber(ban_id) then
 chat_kick(msg.chat_id_,v.user_id_)
@@ -5368,7 +5367,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. ms
 end
 --------------------------------------------------------------------------------------------------------------
 if text == 'تحديث' and Devban(msg) then    
-dofile('VEVOM.lua')  
+dofile('VENOM.lua')  
 send(msg.chat_id_, msg.id_, ' ● تم تحديث جميع الملفات') 
 end 
 if text == ("مسح قائمه العام") and Devban(msg) then
@@ -7472,7 +7471,7 @@ local json_file, res = https.request("https://raw.githubusercontent.com/agrrdVEV
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
-dofile('VEVOM.lua')  
+dofile('VENOM.lua')  
 else
 send(msg.chat_id_, msg.id_," ● عذرا الملف لايدعم سورس حطبه\n") 
 end
@@ -7494,7 +7493,7 @@ local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
 chek:close()
 send(msg.chat_id_, msg.id_,t) 
-dofile('VEVOM.lua')  
+dofile('VENOM.lua')  
 else
 send(msg.chat_id_, msg.id_," ● عذرا الملف لايدعم سورس حطبه\n") 
 end
@@ -8587,18 +8586,18 @@ end;end,nil)
 return false
 end
 if text == ("رفع مساعد") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
-function Function_VEVOM(extra, result, success)
+function Function_VENOM(extra, result, success)
 bot_data:del(ban_id.."msa3d:ban")
 bot_data:sadd(ban_id.."msa3d:ban", result.sender_user_id_)
 bot_data:set(ban_id.."id:msa3d:ban", result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","● تم ترقيته مساعد في البوت")  
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_VEVOM, nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_VENOM, nil)
 return false 
 end
 if text and text:match("^رفع مساعد @(.*)$") and SudoBot(msg) then
 local username = text:match("^رفع مساعد @(.*)$")
-function Function_VEVOM(extra, result, success)
+function Function_VENOM(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
 send(msg.chat_id_,msg.id_,"● عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
@@ -8612,7 +8611,7 @@ else
 send(msg.chat_id_, msg.id_,"● لا يوجد حساب بهاذا المعرف")
 end
 end
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_VEVOM, nil)
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_VENOM, nil)
 return false 
 end
 if text and text:match("^رفع مساعد (%d+)$") and SudoBot(msg) then
@@ -8624,23 +8623,23 @@ Reply_Status(msg,userid,"reply","● تم ترقيته مساعد في البو�
 return false 
 end
 if text == ("تنزيل المساعد") and SudoBot(msg) then
-function Function_VEVOM(extra, result, success)
+function Function_VENOM(extra, result, success)
 local id = bot_data:get(ban_id.."id:msa3d:ban")
 Reply_Status(msg,id,"reply","● تم تنزيله من المساعد")  
 bot_data:del(ban_id.."msa3d:ban")
 bot_data:del(ban_id.."id:msa3d:ban")
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_VEVOM, nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_VENOM, nil)
 return false 
 end
 if text == ("تنزيل مساعد") and SudoBot(msg) then
-function Function_VEVOM(extra, result, success)
+function Function_VENOM(extra, result, success)
 local id = bot_data:get(ban_id.."id:msa3d:ban")
 Reply_Status(msg,id,"reply","● تم تنزيله من المساعد")  
 bot_data:del(ban_id.."msa3d:ban")
 bot_data:del(ban_id.."id:msa3d:ban")
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_VEVOM, nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_VENOM, nil)
 return false 
 end
 if text == "المساعد" or text == "مساعد" then
@@ -8690,16 +8689,16 @@ end
 end
 ------------------------------------------------------------------------ adddev2 sudog
 if text == ("رفع مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
-function Function_VEVOM(extra, result, success)
+function Function_VENOM(extra, result, success)
 bot_data:sadd(ban_id.."Dev:ban:2", result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","● تم ترقيته مطور ثانوي في البوت")  
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_VEVOM, nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_VENOM, nil)
 return false 
 end
 if text and text:match("^رفع مطور ثانوي @(.*)$") and SudoBot(msg) then
 local username = text:match("^رفع مطور ثانوي @(.*)$")
-function Function_VEVOM(extra, result, success)
+function Function_VENOM(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
 send(msg.chat_id_,msg.id_,"● عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
@@ -8711,7 +8710,7 @@ else
 send(msg.chat_id_, msg.id_,"● لا يوجد حساب بهاذا المعرف")
 end
 end
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_VEVOM, nil)
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_VENOM, nil)
 return false 
 end
 if text and text:match("^رفع مطور ثانوي (%d+)$") and SudoBot(msg) then
@@ -8721,16 +8720,16 @@ Reply_Status(msg,userid,"reply","● تم ترقيته مطور ثانوي في 
 return false 
 end
 if text == ("تنزيل مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
-function Function_VEVOM(extra, result, success)
+function Function_VENOM(extra, result, success)
 bot_data:srem(ban_id.."Dev:ban:2", result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","● تم تنزيله من المطور ثانويين")  
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_VEVOM, nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_VENOM, nil)
 return false 
 end
 if text and text:match("^تنزيل مطور ثانوي @(.*)$") and SudoBot(msg) then
 local username = text:match("^تنزيل مطور ثانوي @(.*)$")
-function Function_VEVOM(extra, result, success)
+function Function_VENOM(extra, result, success)
 if result.id_ then
 bot_data:srem(ban_id.."Dev:ban:2", result.id_)
 Reply_Status(msg,result.id_,"reply","● تم تنزيله من المطور ثانويين")  
@@ -8738,7 +8737,7 @@ else
 send(msg.chat_id_, msg.id_,"● لا يوجد حساب بهاذا المعرف")
 end
 end
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_VEVOM, nil)
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_VENOM, nil)
 return false
 end  
 if text and text:match("^تنزيل مطور ثانوي (%d+)$") and SudoBot(msg) then
@@ -12961,42 +12960,42 @@ end
 end
 if text and text == "منع" and msg.reply_to_message_id_ == 0 and Manager(msg)  then       
 send(msg.chat_id_, msg.id_," ● ارسل الكلمه لمنعها")  
-bot_data:set(ban_id.."VEVOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"rep")  
+bot_data:set(ban_id.."VENOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"rep")  
 return false  
 end    
 if text then   
-local tsssst = bot_data:get(ban_id.."VEVOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local tsssst = bot_data:get(ban_id.."VENOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if tsssst == "rep" then   
 send(msg.chat_id_, msg.id_," ● ارسل التحذير عند ارسال الكلمه")  
-bot_data:set(ban_id.."VEVOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"repp")  
-bot_data:set(ban_id.."VEVOM1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_, text)  
-bot_data:sadd(ban_id.."VEVOM1:List:Filter"..msg.chat_id_,text)  
+bot_data:set(ban_id.."VENOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"repp")  
+bot_data:set(ban_id.."VENOM1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_, text)  
+bot_data:sadd(ban_id.."VENOM1:List:Filter"..msg.chat_id_,text)  
 return false  end  
 end
 if text then  
-local test = bot_data:get(ban_id.."VEVOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = bot_data:get(ban_id.."VENOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if test == "repp" then  
 send(msg.chat_id_, msg.id_," ● تم منع الكلمه مع التحذير")  
-bot_data:del(ban_id.."VEVOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-local test = bot_data:get(ban_id.."VEVOM1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
+bot_data:del(ban_id.."VENOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = bot_data:get(ban_id.."VENOM1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
 if text then   
-bot_data:set(ban_id.."VEVOM1:Add:Filter:Rp2"..test..msg.chat_id_, text)  
+bot_data:set(ban_id.."VENOM1:Add:Filter:Rp2"..test..msg.chat_id_, text)  
 end  
-bot_data:del(ban_id.."VEVOM1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
+bot_data:del(ban_id.."VENOM1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
 return false  end  
 end
 
 if text == "الغاء منع" and msg.reply_to_message_id_ == 0 and Manager(msg) then    
 send(msg.chat_id_, msg.id_," ● ارسل الكلمه الان")  
-bot_data:set(ban_id.."VEVOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"reppp")  
+bot_data:set(ban_id.."VENOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"reppp")  
 return false  end
 if text then 
-local test = bot_data:get(ban_id.."VEVOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = bot_data:get(ban_id.."VENOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if test and test == "reppp" then   
 send(msg.chat_id_, msg.id_," ● تم الغاء منعها")  
-bot_data:del(ban_id.."VEVOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-bot_data:del(ban_id.."VEVOM1:Add:Filter:Rp2"..text..msg.chat_id_)  
-bot_data:srem(ban_id.."VEVOM1:List:Filter"..msg.chat_id_,text)  
+bot_data:del(ban_id.."VENOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+bot_data:del(ban_id.."VENOM1:Add:Filter:Rp2"..text..msg.chat_id_)  
+bot_data:srem(ban_id.."VENOM1:List:Filter"..msg.chat_id_,text)  
 return false  end  
 end
 
@@ -13057,21 +13056,21 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 
 if text == "مسح قائمه المنع"and Manager(msg) then   
-local list = bot_data:smembers(ban_id.."VEVOM1:List:Filter"..msg.chat_id_)  
+local list = bot_data:smembers(ban_id.."VENOM1:List:Filter"..msg.chat_id_)  
 for k,v in pairs(list) do  
-bot_data:del(ban_id.."VEVOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-bot_data:del(ban_id.."VEVOM1:Add:Filter:Rp2"..v..msg.chat_id_)  
-bot_data:srem(ban_id.."VEVOM1:List:Filter"..msg.chat_id_,v)  
+bot_data:del(ban_id.."VENOM1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+bot_data:del(ban_id.."VENOM1:Add:Filter:Rp2"..v..msg.chat_id_)  
+bot_data:srem(ban_id.."VENOM1:List:Filter"..msg.chat_id_,v)  
 end  
 send(msg.chat_id_, msg.id_," ● تم مسح قائمه المنع")  
 end
 
 if text == "قائمه المنع" and Manager(msg) then   
-local list = bot_data:smembers(ban_id.."VEVOM1:List:Filter"..msg.chat_id_)  
+local list = bot_data:smembers(ban_id.."VENOM1:List:Filter"..msg.chat_id_)  
 t = "\n ● قائمة المنع \n ♬•━━━━━𝘀𝗼𝘂𝗿𝗰𝗲 𝗵𝗮𝘁𝗯𝗮━━━━━•♬\n"
 for k,v in pairs(list) do  
-local VEVOM_Msg = bot_data:get(ban_id.."VEVOM1:Add:Filter:Rp2"..v..msg.chat_id_)   
-t = t..""..k.."- "..v.." ↭ {"..VEVOM_Msg.."}\n"    
+local VENOM_Msg = bot_data:get(ban_id.."VENOM1:Add:Filter:Rp2"..v..msg.chat_id_)   
+t = t..""..k.."- "..v.." ↭ {"..VENOM_Msg.."}\n"    
 end  
 if #list == 0 then  
 t = " ● لا يوجد كلمات ممنوعه"  
@@ -13758,7 +13757,7 @@ end
 
 if text == ""..(bot_data:get(ban_id..'Name:Bot') or 'حطبه').."" then  
 Namebot = (bot_data:get(ban_id..'Name:Bot') or 'حطبه')
-local VEVOM_Msg = {
+local VENOM_Msg = {
 'ننعم يروحي 😻??',
 'نعم يا قلب  '..Namebot..'',
 'عاوز اي من '..Namebot..'',
@@ -13774,7 +13773,7 @@ local VEVOM_Msg = {
 'انا '..Namebot..' احسن البوتات 🤩♥️',
 'نعم'
 } 
-Namebot = VEVOM_Msg[math.random(#VEVOM_Msg)] 
+Namebot = VENOM_Msg[math.random(#VENOM_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13793,7 +13792,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, l
 end
 if text == "بوت" then
 local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'حطبه') 
-local VEVOM_Msg = { 
+local VENOM_Msg = { 
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
 'اسمي  '..Namebot..' يعمري🌚🌹',
@@ -13805,7 +13804,7 @@ local VEVOM_Msg = {
 'اسمي  '..Namebot..' ياحياتي🧸♥️',
 'اسمي  '..Namebot..' يوتكه🙈🍑',
 } 
-Namebot = VEVOM_Msg[math.random(#VEVOM_Msg)] 
+Namebot = VENOM_Msg[math.random(#VENOM_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16346,19 +16345,19 @@ if #group == i then
 if (w + q) == 0 then
 send(msg.chat_id_, msg.id_,' ●  لا يوجد جروبات وهميه في البوت\n')   
 else
-local VEVOM = (w + q)
-local sendok = #group - VEVOM
+local VENOM = (w + q)
+local sendok = #group - VENOM
 if q == 0 then
-VEVOM = ''
+VENOM = ''
 else
-VEVOM = '\n- تم ازالة  ⋙ 『 '..q..' 』 جروبات من البوت'
+VENOM = '\n- تم ازالة  ⋙ 『 '..q..' 』 جروبات من البوت'
 end
 if w == 0 then
-VEVOMk = ''
+VENOMk = ''
 else
-VEVOMk = '\n- تم ازالة  ⋙ 『 '..w..' 』 كروب لان البوت عضو'
+VENOMk = '\n- تم ازالة  ⋙ 『 '..w..' 』 كروب لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,' ● عدد الجروبات الان  ⋙ 『 '..#group..' 』'..VEVOMk..''..VEVOM..'\n*- الان عدد الجروبات الحقيقي  ⋙ 『 '..sendok..' 』 جروبات\n')   
+send(msg.chat_id_, msg.id_,' ● عدد الجروبات الان  ⋙ 『 '..#group..' 』'..VENOMk..''..VENOM..'\n*- الان عدد الجروبات الحقيقي  ⋙ 『 '..sendok..' 』 جروبات\n')   
 end
 end
 end,nil)
@@ -16369,7 +16368,7 @@ end
 if text and text:match("^(gpinfo)$") or text and text:match("^معلومات الجروب$") then
 function gpinfo(arg,data)
 -- vardump(data) 
-VEVOMdx(msg.chat_id_, msg.id_, ' ● ايدي المجموعة  ⋙ 『 '..msg.chat_id_..' 』\n ● عدد الادمنيه  ⋙ 『 *'..data.administrator_count_..' 』*\n ● عدد المحظورين  ⋙ 『 *'..data.kicked_count_..' 』*\n ● عدد الاعضاء  ⋙ 『 *'..data.member_count_..' 』*\n', 'md') 
+VENOMdx(msg.chat_id_, msg.id_, ' ● ايدي المجموعة  ⋙ 『 '..msg.chat_id_..' 』\n ● عدد الادمنيه  ⋙ 『 *'..data.administrator_count_..' 』*\n ● عدد المحظورين  ⋙ 『 *'..data.kicked_count_..' 』*\n ● عدد الاعضاء  ⋙ 『 *'..data.member_count_..' 』*\n', 'md') 
 end 
 getChannelFull(msg.chat_id_, gpinfo, nil) 
 end
@@ -22218,8 +22217,8 @@ local Bots = bot_data:get(ban_id.."lock:Bot:kick"..msg.chat_id_)
 for i=0,#mem_id do  
 if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Mod(msg) and Bots == "kick" then   
 https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
-VEVOM = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
-local Json_Info = JSON.decode(VEVOM)
+VENOM = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(VENOM)
 if Json_Info.ok == true and #mem_id == i then
 local Msgs = {}
 Msgs[0] = msg.id_
@@ -22240,8 +22239,8 @@ local mem_id = msg.content_.members_
 local Bots = bot_data:get(ban_id.."lock:Bot:kick"..msg.chat_id_) 
 for i=0,#mem_id do  
 if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Mod(msg) and Bots == "del" then   
-VEVOM = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
-local Json_Info = JSON.decode(VEVOM)
+VENOM = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(VENOM)
 if Json_Info.ok == true and #mem_id == i then
 local Msgs = {}
 Msgs[0] = msg.id_
@@ -22275,7 +22274,7 @@ end
 end   
 --------------------------------------------------------------------------------------------------------------
 su_hatba(data.message_,data)
-plugin_VEVOM(data.message_)
+plugin_VENOM(data.message_)
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
@@ -22377,13 +22376,13 @@ return false
 end  
 end 
 ------------------------------------------------------------------------
-local VEVOMAbot = bot_data:get(ban_id.."VEVOM1:Add:Filter:Rp2"..text..result.chat_id_)   
-if VEVOMAbot then    
+local VENOMAbot = bot_data:get(ban_id.."VENOM1:Add:Filter:Rp2"..text..result.chat_id_)   
+if VENOMAbot then    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0," ● الـعـضو  : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ● ["..VEVOMAbot.."] \n") 
+send(msg.chat_id_,0," ● الـعـضو  : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ● ["..VENOMAbot.."] \n") 
 else
-send(msg.chat_id_,0," ● الـعـضو  : {["..data.first_name_.."](T.ME/su_hatba)}\n ● ["..VEVOMAbot.."] \n") 
+send(msg.chat_id_,0," ● الـعـضو  : {["..data.first_name_.."](T.ME/su_hatba)}\n ● ["..VENOMAbot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
@@ -22404,9 +22403,9 @@ end
 end
 ------------------------------------------------------------------------
 if text then
-local VEVOM1_Msg = bot_data:get(ban_id.."VEVOM1:Add:Filter:Rp2"..text..result.chat_id_)   
-if VEVOM1_Msg then    
-send(msg.chat_id_, msg.id_," ● "..VEVOM1_Msg)
+local VENOM1_Msg = bot_data:get(ban_id.."VENOM1:Add:Filter:Rp2"..text..result.chat_id_)   
+if VENOM1_Msg then    
+send(msg.chat_id_, msg.id_," ● "..VENOM1_Msg)
 DeleteMessage(result.chat_id_, {[0] = data.message_id_})     
 return false
 end
