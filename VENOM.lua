@@ -3805,9 +3805,6 @@ keyboard.inline_keyboard = {
 {text = 'الغاء تقيد', callback_data="/t7km5 "..result.sender_user_id_},{text = 'تقيد', callback_data="/t7km6 "..result.sender_user_id_},
 },
 }
-{text = 'رفع رتبه', callback_data="/t7km3 "..result.sender_user_id_},{text = 'تنزيل رتبه', callback_data="/t7kmrtb1 "..result.sender_user_id_},
-},
-{
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -3815,7 +3812,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
-if text == 'تحكم الكتم' and msg.reply_to_message_id_ and Mod(msg) then
+if text == 'رفع رتبه' and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local VENOM = bot_data:get(ban_id..'text:ch:user')
 if VENOM then
@@ -3831,11 +3828,11 @@ local Text = 'عذرا هذا '..Rutba(result.sender_user_id_,msg.chat_id_)..'\n
 send(msg.chat_id_, msg.id_, Text)
 return false
 end
-local Text = 'مرحبـآ عزيزي  يمكنك التحكم بكتم العضو عن طريق الازرار '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local Text = 'مرحبـآ عزيزي  يمكنك  رفع العضو من جميع الرتب التي امامك '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '« الغاء كتم »', callback_data="/t7km1 "..result.sender_user_id_},{text = '« كتم »', callback_data="/t7km2 "..result.sender_user_id_},
+{text = '« رفع رتبه »', callback_data="/t7km1 "..result.sender_user_id_},{text = '« تنزيل رتبه »', callback_data="/t7kmrtb1 "..result.sender_user_id_},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3847,11 +3844,11 @@ end
 
 if text == 'حطبه' then
 if not Mod(msg) then
-send(msg.chat_id_, msg.id_,' 🔅︙ هذا الامر خدد ليس لك\n')
+send(msg.chat_id_, msg.id_,' 🔅︙ معلش خليه يرفعك مطور عشان تقدر تستخدم الامر \n')
 return false
 end
 local Text =[[
-♡︙اهلا بك مجددا عزيزي 
+♡︙نورت عمري ممكن تختار من هون اللي يناسبك 
 ♡︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس حطبه فقط اضغط على الامر الذي تريد تنفيذه
 ]]
 keyboard = {} 
