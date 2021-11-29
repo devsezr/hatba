@@ -3805,6 +3805,9 @@ keyboard.inline_keyboard = {
 {text = 'الغاء تقيد', callback_data="/t7km5 "..result.sender_user_id_},{text = 'تقيد', callback_data="/t7km6 "..result.sender_user_id_},
 },
 }
+{text = 'رفع رتبه', callback_data="/t7km3 "..result.sender_user_id_},{text = 'تنزيل رتبه', callback_data="/t7kmrtb1 "..result.sender_user_id_},
+},
+{
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -3833,48 +3836,6 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {
 {text = '« الغاء كتم »', callback_data="/t7km1 "..result.sender_user_id_},{text = '« كتم »', callback_data="/t7km2 "..result.sender_user_id_},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
-return false
-end
-
-if text == 'رفع رتبه' and msg.reply_to_message_id_ and Mod(msg) then
-if AddChannel(msg.sender_user_id_) == false then
-local VENOM = bot_data:get(ban_id..'text:ch:user')
-if VENOM then
-send(msg.chat_id_, msg.id_,'['..VENOM..']')
-else
-send(msg.chat_id_, msg.id_,'♪︙لا تستطيع استخدام البوت \n ♪︙يرجى الاشتراك بالقناه اولا \n ♪︙اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
-end
-return false
-end
-function start_function(extra, result, success)
-if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) == true then
-local Text = 'عذرا هذا '..Rutba(result.sender_user_id_,msg.chat_id_)..'\nلا يمكنني التحكم بة'
-send(msg.chat_id_, msg.id_, Text)
-return false
-end
-local Text = 'مرحبـآ عزيزي  يمكنك التحكم بالعضو عن طريق الازرار '..Rutba(msg.sender_user_id_,msg.chat_id_)
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '❆ رفع مطور ثانوي ❆', callback_data="/t7kmrtb2_1 "..userid},{text = '❆ رفع مطور ❆', callback_data="/t7kmrtb2_2 "..userid},
-},
-{
-{text = '❆ رفع مالك ❆', callback_data="/t7kmrtb2_3 "..userid},{text = '❆ رفع منشئ اساسي ❆', callback_data="/t7kmrtb2_4 "..userid},
-},
-{
-{text = '❆ رفع منشئ ❆', callback_data="/t7kmrtb2_5 "..userid},{text = '❆ رفع مدير ❆', callback_data="/t7kmrtb2_6 "..userid},
-},
-{
-{text = '❆ رفع ادمن ❆', callback_data="/t7kmrtb2_7 "..userid},{text = '❆ رفع مميز ❆', callback_data="/t7kmrtb2_8 "..userid},
-},
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
