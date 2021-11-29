@@ -6421,6 +6421,160 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/JABWA6/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+if text == "احاديث" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='مرحبآا إليك احاديث بالصور' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'احاديث اخري', callback_data="/ljljkj2"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/T_e_m_o_1/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+-------------
+if text == "صور كرتون" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='مرحبآا إليك صور كرتون' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/swary0/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+-------------
+if text == "كرتون" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='مرحبآا إليك صور كرتون' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/swary0/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+--------
+if text == "رمزيات ولاد" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='تم أختيار صوره عشوائيه لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu3"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Boys_app/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+--------
+if text == "صور ولاد" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='تم أختيار صوره عشوائيه لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu3"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Boys_app/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+--------
+if text == "رمزيات بنات" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='تم أختيار صوره عشوائيه لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu4"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Girl_ap/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+--------
+if text == "صور بنات" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='تم أختيار صوره عشوائيه لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu4"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Girl_ap/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+------
+if text == "رمزيات كابلز" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='تم أختيار صوره عشوائيه لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu5"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BOY_GIRLM/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+-------
+if text == "كابلز" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='تم أختيار صوره عشوائيه لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu5"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BOY_GIRLM/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+-------
+if text == "صور انيمي" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='تم أختيار صوره عشوائيه لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu6"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/taha_ow/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+-------
+if text == "انيمي" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='تم أختيار صوره عشوائيه لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu6"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/taha_ow/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+------
+if text == "انمي" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='تم أختيار صوره عشوائيه لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu6"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/taha_ow/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+------
+if text == "خلفيات رومانسيه" and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='مرحبآا إليك صور رومانسيه' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu2"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/jrumdi/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+------
+if text == "خلفيات " and not  bot_data:get(rob_id.."sing:for:me"..msg.chat_id_) then 
+rob = math.random(1,28); 
+local Text ='مرحبآا إليك صور رومانسيه' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'صور اخري', callback_data="/hshshdvu2"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/jrumdi/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+------
 if text == "كتبات بالصور" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
 ban = math.random(3,49); 
 local Text ='✨🌻' 
@@ -21971,27 +22125,109 @@ keyboard.inline_keyboard = {
 DeleteMessage(Chat_id,{[0] = Msg_id})  
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. Chat_id .. '&video=https://t.me/Qapplu/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-
-if Text == '/Omer1' then
-if not CoSu(data) then
-local notText = 'الاوامر لا تخصك🤔🙄'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
-local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or bot_data:get(rob_id.."Private:Group:Link"..msg.chat_id_) 
-if linkgpp.ok == true then 
-local linkgp = ' مرحبا اليك استوري مضحك .\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
-keyboard = {} 
-keyboard.inline_keyboard = {{{text = ta.title_, url=linkgpp.result}},}
+if Text == '/ljljkj2' then
+Text = 'مرحبآا إليك احاديث بالصور'
+rob = math.random(1,28); 
+keyboard = {}
+keyboard.inline_keyboard = {
+{
+{text = 'احاديث اخري', callback_data="/ljljkj2"},
+},
+}
 DeleteMessage(Chat_id,{[0] = Msg_id})  
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/JABWA6/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-send(msg.chat_id_, msg.id_,' مرحبا اليك استوري مضحك .') 
-end 
-end,nil) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. Chat_id .. '&photo=https://t.me/T_e_m_o_1/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
+if Text == '/hshshdvu' then
+Text = 'مرحبآا إليك كرتون بالصور'
+rob = math.random(1,28); 
+keyboard = {}
+keyboard.inline_keyboard = {
+{
+{text = 'صوره اخري', callback_data="/hshshdvu"},
+},
+}
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. Chat_id .. '&photo=https://t.me/swary0/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if Text == '/hshshdvu2' then
+Text = 'مرحبآا إليك خلفيات رومانسيه'
+rob = math.random(1,28); 
+keyboard = {}
+keyboard.inline_keyboard = {
+{
+{text = 'صوره اخري', callback_data="/hshshdvu2"},
+},
+}
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. Chat_id .. '&photo=https://t.me/jrumdi/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if Text == '/hshshdvu3' then
+Text = 'تم اختيار صوره عشوائيه لك'
+rob = math.random(1,28); 
+keyboard = {}
+keyboard.inline_keyboard = {
+{
+{text = 'صوره اخري', callback_data="/hshshdvu3"},
+},
+}
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. Chat_id .. '&photo=https://t.me/Boys_app/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if Text == '/hshshdvu4' then
+Text = 'تم اختيار صوره عشوائيه لك'
+rob = math.random(1,28); 
+keyboard = {}
+keyboard.inline_keyboard = {
+{
+{text = 'صوره اخري', callback_data="/hshshdvu4"},
+},
+}
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. Chat_id .. '&photo=https://t.me/Girl_ap/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if Text == '/hshshdvu5' then
+Text = 'تم اختيار صوره عشوائيه لك'
+rob = math.random(1,28); 
+keyboard = {}
+keyboard.inline_keyboard = {
+{
+{text = 'صوره اخري', callback_data="/hshshdvu5"},
+},
+}
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. Chat_id .. '&photo=https://t.me/BOY_GIRLM/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if Text == '/hshshdvu6' then
+Text = 'تم اختيار صوره عشوائيه لك'
+rob = math.random(1,28); 
+keyboard = {}
+keyboard.inline_keyboard = {
+{
+{text = 'صوره اخري', callback_data="/hshshdvu6"},
+},
+}
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. Chat_id .. '&photo=https://t.me/taha_ow/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if Text == '/ljljkj22' then
+Text = 'مرحبآا إليك احاديث بالصور'
+rob = math.random(1,28); 
+keyboard = {}
+keyboard.inline_keyboard = {
+{
+{text = 'القائمه الرئيسيه', callback_data="/allstate5"},
+},
+}
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. Chat_id .. '&photo=https://t.me/T_e_m_o_1/'..rob..'&caption=' .. URL.escape(Text).."&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
 if Text == '/chair' then
 Text = 'اضغط علي الزر لاختيار ثيم اخر' 
 ban = math.random(1,57); 
