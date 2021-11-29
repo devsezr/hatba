@@ -2898,7 +2898,7 @@ end,nil)
 end
 
 
-if text and text:match("^سوسو$") or text and text:match("^مرات سيزر$") or text and text:match("^devid$") then
+if text and text:match("^سوسو$") or text and text:match("^ديفد$") or text and text:match("^devid$") then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
 local Name1 = result.first_name_
@@ -2922,36 +2922,7 @@ LinkGroup = LinkGp.result
 else
 LinkGroup = 'لا يوجد'
 end
-sendText(1360978555,"●. سوسو الحقي حبيبك بيندهلك \n●الشخص  {"..Name.."}\n●اسم الجروب {"..NameChat.."}\n●ايدي الجروب {`"..msg.chat_id_.."`}\n●رابط الجروب \n ["..LinkGroup.."] ",0,'md')
-end,nil)
-end,nil)
-end
-
-if text and text:match("^سيزر$") or text and text:match("^ديفد$") or text and text:match("^devid$") then
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
-local Name1 = result.first_name_
-local Name1 = Name1:gsub('"',"") 
-local Name1 = Name1:gsub("'","") 
-local Name1 = Name1:gsub("`","") 
-local Name1 = Name1:gsub("*","") 
-local Name1 = Name1:gsub("{","") 
-local Name1 = Name1:gsub("}","") 
-local Name = '['..Name1..'](tg://user?id='..result.id_..')'
-local NameChat = dp.title_
-local NameChat = NameChat:gsub('"',"") 
-local NameChat = NameChat:gsub("'","") 
-local NameChat = NameChat:gsub("`","") 
-local NameChat = NameChat:gsub("*","") 
-local NameChat = NameChat:gsub("{","") 
-local NameChat = NameChat:gsub("}","") 
-local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
-if LinkGp.ok == true then 
-LinkGroup = LinkGp.result
-else
-LinkGroup = 'لا يوجد'
-end
-sendText(1804119251,"🔅︙. هناك شخص يريدك يا سيدي  سيزر \n🔅︙الشخص  {"..Name.."}\n🔅︙اسم الجروب {"..NameChat.."}\n🔅︙ايدي الجروب {`"..msg.chat_id_.."`}\n🔅︙رابط الجروب \n ["..LinkGroup.."] ",0,'md')
+sendText(1360978555,"😂😂😂 الحقس يبت حبيبك سيزر بيندهلك \n🔅︙الشخص  {"..Name.."}\n🔅︙اسم الجروب {"..NameChat.."}\n🔅︙ايدي الجروب {`"..msg.chat_id_.."`}\n🔅︙رابط الجروب \n ["..LinkGroup.."] ",0,'md')
 end,nil)
 end,nil)
 end
@@ -3877,7 +3848,7 @@ send(msg.chat_id_, msg.id_,' 🔅︙ معلش خليه يرفعك مطور عش�
 return false
 end
 local Text =[[
-♡︙نورت عمري ممكن تختار من هون اللي يناسبك 
+♡︙نورت عمري ممكن تختار اللي تريده 
 ♡︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس حطبه فقط اضغط على الامر الذي تريد تنفيذه
 ]]
 keyboard = {} 
@@ -3941,7 +3912,6 @@ local Text = [[
  
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {
 keyboard.inline_keyboard = {
 {
 {text = '◗العاب السورس◖', callback_data="/mute-name"},{text = '◗الاضافات◖', callback_data="/change-photo"},
